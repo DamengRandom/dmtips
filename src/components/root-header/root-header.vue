@@ -10,8 +10,7 @@
 
       <md-app-drawer :md-active.sync="menuVisible" md-persistent="full">
         <md-toolbar class="md-transparent" md-elevation="0">
-          <span>Navigation</span>
-
+          <span>Menu List</span>
           <div class="md-toolbar-section-end">
             <md-button class="md-icon-button md-dense" @click="toggleMenu">
               <md-icon>keyboard_arrow_left</md-icon>
@@ -22,43 +21,29 @@
         <md-list>
           <md-list-item>
             <md-icon>move_to_inbox</md-icon>
-            <span class="md-list-item-text">Inbox</span>
+            <router-link to="/">
+              <span class="md-list-item-text">Dashboard</span>
+            </router-link>
           </md-list-item>
-
           <md-list-item>
             <md-icon>send</md-icon>
-            <span class="md-list-item-text">Sent Mail</span>
-          </md-list-item>
-
-          <md-list-item>
-            <md-icon>delete</md-icon>
-            <span class="md-list-item-text">Trash</span>
-          </md-list-item>
-
-          <md-list-item>
-            <md-icon>error</md-icon>
-            <span class="md-list-item-text">Spam</span>
+            <router-link to="/tips">
+              <span class="md-list-item-text">Tips</span>
+            </router-link>
           </md-list-item>
         </md-list>
       </md-app-drawer>
 
       <md-app-content>
-        <app-banner></app-banner>
-        <app-about></app-about>
-        <app-words></app-words>
-        <app-contact></app-contact>
-        <app-footer></app-footer>
+        <router-view></router-view>
       </md-app-content>
     </md-app>
   </div>
 </template>
 
 <script>
-  import About from "../about/about.vue";
-  import Banner from '../banner/banner.vue';
-  import Contact from "../contact/contact.vue";
-  import Footer from '../footer/footer.vue';
-  import Words from '../words/words.vue';
+  import Dashboard from '../dashboard/dashboard.vue';  
+  import Tips from '../tips/tips.vue';
 
   export default {
     name: 'Header',
@@ -66,11 +51,8 @@
       menuVisible: false
     }),
     components: {
-      'app-about': About,
-      'app-banner': Banner,
-      'app-contact': Contact,
-      'app-footer': Footer,
-      'app-words': Words 
+      'app-dashboard': Dashboard,
+      'app-tips': Tips
     },
     methods: {
       toggleMenu () {
@@ -82,11 +64,11 @@
 
 <style scoped>
   .md-app {
-    min-height: 350px;
+    height: 100%;
     border: 1px solid rgba(#000, .12);
   }
   .md-drawer {
-    width: 230px;
+    width: 240px;
     max-width: calc(100vw - 125px);
   }
 </style>
