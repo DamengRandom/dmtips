@@ -1,16 +1,16 @@
 <template>
   <div>
-    <app-dashboard></app-dashboard>
+    <app-root-header></app-root-header>
   </div>
 </template>
 
 <script>
-  import Dashboard from "./components/dashboard/dashboard.vue";
+  import RootHeader from "./components/root-header/root-header.vue";
 
   export default {
     name: 'App',
     components: {
-      'app-dashboard': Dashboard
+      'app-root-header': RootHeader
     }
   }
 </script>
