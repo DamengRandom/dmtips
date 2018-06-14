@@ -34,7 +34,7 @@
         </md-list>
       </md-app-drawer>
 
-      <md-app-content>
+      <md-app-content class="inner-container">
         <router-view></router-view>
       </md-app-content>
     </md-app>
@@ -70,5 +70,9 @@
   .md-drawer {
     width: 240px;
     max-width: calc(100vw - 125px);
+  }
+  .inner-container {
+    min-height: 480px;
+    padding: 0px;
   }
 </style>
