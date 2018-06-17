@@ -11,7 +11,6 @@
     </md-empty-state>
     <md-empty-state
       class="md-accent"
-      md-rounded
       md-icon="alarm_off"
       md-label="Nothing in Reminders"
       md-description="Create a Reminder and it will show up here.">
@@ -25,7 +24,7 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   .md-empty-state {
     display: inline-block;
     vertical-align: middle;

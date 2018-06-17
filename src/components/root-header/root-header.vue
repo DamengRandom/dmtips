@@ -62,7 +62,7 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   .md-app {
     height: 100%;
     border: 1px solid rgba(#000, .12);
