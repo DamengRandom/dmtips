@@ -15,7 +15,7 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   @import url('https://fonts.googleapis.com/css?family=Acme');
   .banner {
     /* background-image: url('../../assets/imgs/dmtips-banner.jpg'); */

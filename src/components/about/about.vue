@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="text-center">
-      <h3>About <u>Dameng</u></h3>
+      <h3>About <span>Dameng</span></h3>
     </div>
     <md-steppers md-vertical :md-active-step.sync="active">
       <md-step id="first" md-label="Started as a Front-end Intern">
@@ -41,10 +41,17 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+  /* How to implement scss: just need to install node-sass sas-loader packages */
   /* temporary put here, later change */
   .text-center {
     text-align: center; 
   }
-  h3 { font-size: 1.8em;}
+  h3 { 
+    font-size: 1.8em;
+    span {
+      border-bottom: 4px solid;
+      padding-bottom: 4px;
+    }
+  }
 </style>

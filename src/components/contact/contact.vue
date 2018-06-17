@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="text-center">
+  <div class="text-center">
+    <div>
       <h3>Contact Dameng</h3>
     </div>
     <div class="md-layout">
@@ -21,7 +21,7 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   /* temporary put here, later change */
   div,
   .text-center {
