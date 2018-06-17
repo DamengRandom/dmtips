@@ -1,0 +1,9 @@
+@import '../shared.scss';
+
+#contact {
+  padding: $padding-xl;
+  .fab {
+    font-size: $font-h1;
+    padding: $padding-sm $padding-md;
+  }
+}

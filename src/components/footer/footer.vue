@@ -14,15 +14,6 @@
   }
 </script>
 
-<style scoped>
-  .footer {
-    width: 100%;
-  }
-  .text-center {
-    text-align: center; 
-  }
-  p {
-    display: block;
-    margin: 0 auto;
-  }
+<style lang="scss" scoped>
+  @import '~styles/partials/footer';
 </style>

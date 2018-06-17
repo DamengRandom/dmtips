@@ -1,0 +1,26 @@
+@import '../shared.scss';
+
+// banner font
+@import url('https://fonts.googleapis.com/css?family=Acme');
+
+.banner {
+  background-image: url('http://res.cloudinary.com/dameng/image/upload/v1530543572/twins-bg_rql9lk.jpg');
+  background-size: cover;
+  background-position: center center;
+  height: 360px;
+  opacity: 0.88;
+}
+.inner-banner {
+  color: $theme-dark;
+  font-family: 'Acme', sans-serif;
+  font-size: $font-h2;
+  width: 100%;
+  line-height: 1.2;
+  padding: $padding-xl;
+}
+.inner-banner > p:first-child {
+  font-size: $font-h1;
+}
+.inner-banner > p:last-child {
+  padding-left: $padding-xs;
+}

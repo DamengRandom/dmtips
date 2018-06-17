@@ -1,0 +1,15 @@
+.md-app {
+  height: 100%;
+  border: 1px solid rgba(#000, .12);
+}
+.md-drawer {
+  width: 240px;
+  max-width: calc(100vw - 125px);
+}
+.inner-container {
+  min-height: 480px;
+  padding: 0px;
+}
+md-app-toolbar {
+  height: 66px;
+}
