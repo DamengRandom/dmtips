@@ -1,7 +1,7 @@
 <template>
   <div>
     <input type="text" 
-      style="display: block; width: 100%;"
+      class="editorTitle"
       v-bind:value="theTitle"
       @input="titleTyping"
       v-bind:placeholder="titlePlaceholder" />
@@ -15,7 +15,7 @@
     data: function() {
       return {
         articleTitle: '',
-        titlePlaceholder: 'Please type a title ..',
+        titlePlaceholder: 'Please type the article title ..',
         editable: false
       }
     },
@@ -32,7 +32,3 @@
     }
   }
 </script>
-
-<style>
-
-</style>

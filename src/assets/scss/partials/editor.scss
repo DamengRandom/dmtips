@@ -1,0 +1,41 @@
+@import '../shared.scss';
+
+#editor {
+  padding: $padding-xl;
+  .editorTitle {
+    background: transparent;
+    width: 100%;
+    border: none;
+    font-size: $font-h1*1.2;
+    height: 48px;
+    color: $theme-dark;
+    display: block;
+    padding: 0 $padding-md;
+    height: 100%;
+  }
+  .editorText {
+    background: transparent;
+    border: none;
+    font-size: $font-h5*1.2;
+    height: 36px;
+    color: $theme-dark;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0 $padding-xl;
+    height: 100%;
+    p {
+      width: 100%;
+    }
+    p:focus {
+      border-bottom: 1px solid $theme-border;
+      outline: none;
+    }
+  }
+  #image figure {
+    text-align: $align-center;
+  }
+  .editorPreview {
+    padding: 0 $padding-md;
+  }
+}

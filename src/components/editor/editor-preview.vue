@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <button @click="showPreview">Preview</button>
-    <button @click="hidePreview">Hide Preview</button>
+  <div class="editorPreview">
+    <md-button id="showPreview" @click="showPreview" v-text="previewText.preview"></md-button>
+    <md-button id="hidePreview" @click="hidePreview" v-text="previewText.hidePreview"></md-button>    
   </div>
 </template>
 
@@ -10,7 +10,10 @@
     name: 'editor-preview',
     data: function() {
       return {
-
+        previewText: {
+          preview: 'Preview',
+          hidePreview: 'Hide Preview'
+        }
       }
     },
     methods: {
@@ -21,14 +24,12 @@
       },
       showPreview() {
         this.preview("false");
+        document.getElementById('content').style.border = "1px solid";
       },
       hidePreview() {
         this.preview("true");
+        document.getElementById('content').style.border = "none";
       }
     }
   }
 </script>
-
-<style>
-
-</style>
