@@ -1,8 +1,26 @@
 @import '../shared.scss';
 
-h2 { 
-  span {
-    border-bottom: $space-xs/1.5 solid;
-    padding-bottom: $padding-xs;
+#about {
+  padding: $padding-xl;
+  .md-layout-item.md-size-50:first-child {
+    text-align: $align-center;
+    img {
+      width: 280px;
+      height: 280px;
+      border: 1px solid $theme-border;
+      border-radius: $space-md;
+      padding: $padding-md;
+    }
+    p {
+      font-size: $font-h4;
+      font-style: italic;
+      padding-top: $padding-md;
+    }
+  }
+  h2 { 
+    span {
+      border-bottom: $space-xs/1.5 solid;
+      padding-bottom: $padding-xs;
+    }
   }
 }

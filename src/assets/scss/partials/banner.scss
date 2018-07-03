@@ -24,3 +24,12 @@
 .inner-banner > p:last-child {
   padding-left: $padding-xs;
 }
+
+@media only screen and (max-width: 600px) {
+  #about .inner-banner {
+    padding: $padding-xs;
+  }
+  .inner-banner > p:first-child {
+    font-size: $font-h4;
+  }
+}

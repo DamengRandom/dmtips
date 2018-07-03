@@ -1,8 +1,8 @@
 <template>
   <div class="footer">
     <md-toolbar md-elevation="0">
-      <p class="text-center">
-        <md-icon>copyright</md-icon>Developed by Dameng @2018
+      <p class="text-center footer-text">
+        <md-icon>copyright</md-icon><span v-text="footerText"></span>
       </p>
     </md-toolbar>
   </div>
@@ -10,7 +10,12 @@
 
 <script>
   export default {
-    name: 'Footer'
+    name: 'Footer',
+    data: function(){
+      return {
+        footerText: 'Developed by Dameng @2018'
+      }
+    }
   }
 </script>
 
