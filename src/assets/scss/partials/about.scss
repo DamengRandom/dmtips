@@ -1,0 +1,8 @@
+@import '../shared.scss';
+
+h2 { 
+  span {
+    border-bottom: $space-xs/1.5 solid;
+    padding-bottom: $padding-xs;
+  }
+}

@@ -1,16 +1,20 @@
 <template>
   <div>
-    <p>Tips</p>
+    <app-editor></app-editor>
   </div>
 </template>
 
 <script>
+  import editor from '../editor/editor.vue';
   export default {
     name: 'tips',
     data: function(){
       return {
         tips: []
       }
+    },
+    components: {
+      'app-editor': editor
     }
   }
 </script>

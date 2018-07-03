@@ -1,12 +1,25 @@
-// @import './variables.scss';
-// @import './shared.scss';
+// variables
+@import './variables.scss';
 
+// theme export
 @import "~vue-material/dist/theme/engine"; // Import the theme engine
 
 @include md-register-theme("default", (
-  primary: md-get-palette-color(lightgreen, A200), // The primary color of your application
-  accent: md-get-palette-color(red, A200), // The accent or secondary color
-  theme: dark // This can be dark or light
+  primary: $theme-primary, // The primary color of your application
+  accent: $theme-contrast, // The accent or secondary color
+  theme: light // This can be dark or light
 ));
 
 @import "~vue-material/dist/theme/all"; // Apply the theme
+
+// shared
+@import './shared.scss';
+
+// partials 
+@import './partials/about';
+@import './partials/banner';
+@import './partials/contact';
+@import './partials/editor';
+@import './partials/footer';
+@import './partials/root-header';
+@import './partials/words';

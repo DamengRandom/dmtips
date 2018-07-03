@@ -1,7 +1,7 @@
 <template>
-  <div class="text-center">
+  <div class="text-center" id="contact">
     <div>
-      <h3>Contact Dameng</h3>
+      <h2 v-text="contact"></h2>
     </div>
     <div class="md-layout">
       <div class="md-layout-item md-small-size-100">
@@ -17,15 +17,15 @@
 
 <script>
   export default {
-    name: 'Contact'
+    name: 'Contact',
+     data: function(){
+       return {
+         contact: 'Contact'
+       }
+     }
   }
 </script>
 
 <style lang="scss" scoped>
-  /* temporary put here, later change */
-  div,
-  .text-center {
-    text-align: center; 
-  }
-  h3 { font-size: 1.8em;}
+  @import '~styles/partials/contact';
 </style>
