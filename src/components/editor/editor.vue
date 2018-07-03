@@ -1,9 +1,9 @@
 <template>
-  <div contenteditable="false">
+  <div contenteditable="false" id="editor">
     <!-- functional buttons -->
     <div v-if="articleTitle.length !== 0">
-      <button @click="addText">Text</button>
-      <button @click="addImage">Image</button>
+      <md-button @click="addText" v-text="buttonTexts.text"></md-button>
+      <md-button @click="addImage" v-text="buttonTexts.image"></md-button>
       <editor-decorators></editor-decorators>
       <editor-preview v-show="previewable"></editor-preview>
     </div>
@@ -13,11 +13,13 @@
         @titleText="articleTitle = $event"></editor-title>
       <div id="text">
         <div v-for="(text, index) in texts"
-          style="display: block; width: 100%; background: white; color: black;"
+          class="editorText"
           :key="`text${index}`"
           :id="`text${index}`">
-          <p type="text" name="text" contenteditable="true"></p>
-          <button @click="removeText(`text${index}`)" contenteditable="false">Remove text</button>
+          <p type="text" name="text" contenteditable="true" autofocus></p>
+          <md-button @click="removeText(`text${index}`)" contenteditable="false">
+            <md-icon>close</md-icon>
+          </md-button>
         </div>
       </div>
       <div id="image">
@@ -26,8 +28,10 @@
           :id="`item${index}`">
           <input v-if="!item.image" type="file" @change="onFileChange(item, $event)">
           <div v-else>
+            <md-button @click="removeImage(item)">
+              <md-icon>close</md-icon>
+            </md-button>
             <img :src="item.image" />
-            <button @click="removeImage(item)">Remove image</button>
           </div>
         </figure>
       </div>
@@ -53,7 +57,11 @@
         articleTitle: '',
         texts: [],
         items: [],
-        preview: false
+        preview: false,
+        buttonTexts: {
+          text: 'Text',
+          image: 'Image'
+        }
       }
     },
     methods: {

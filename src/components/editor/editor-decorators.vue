@@ -1,14 +1,14 @@
 <template>
   <div>
-    <button @click="addLink">Link</button>
-    <button @click="setHeading">Heading</button>
-    <button @click="bolderText">Bolder</button>
-    <button @click="italicText">Italic</button>
-    <button @click="strikeText">Strike</button>
-    <button @click="textCenter">Text Center</button>
-    <button @click="textRight">Text Right</button>
-    <button @click="insertOrderedList">Ordered List</button>
-    <button @click="insertUnorderedList">Unordered List</button>
+    <md-button @click="addLink" v-text="decoratorsText.link"></md-button>
+    <md-button @click="setHeading" v-text="decoratorsText.heading"></md-button>
+    <md-button @click="bolderText" v-text="decoratorsText.bolder"></md-button>
+    <md-button @click="italicText" v-text="decoratorsText.italic"></md-button>
+    <md-button @click="strikeText" v-text="decoratorsText.strike"></md-button>
+    <md-button @click="textCenter" v-text="decoratorsText.centerText"></md-button>
+    <md-button @click="textRight" v-text="decoratorsText.rightText"></md-button>
+    <md-button @click="insertOrderedList" v-text="decoratorsText.orderedList"></md-button>
+    <md-button @click="insertUnorderedList" v-text="decoratorsText.unorderedList"></md-button>
   </div>
 </template>
 
@@ -17,7 +17,17 @@
     name: 'editorFunctions',
     data: function(){
       return {
-        
+        decoratorsText: {
+          link: 'Link',
+          heading: 'Heading',
+          bolder: 'Bolder',
+          italic: 'Italic',
+          strike: 'Strike',
+          centerText: 'Text Center',
+          rightText: 'Text RIght',
+          orderedList: 'Ordered List',
+          unorderedList: 'Unordered List'
+        }
       }
     },
     methods: {
@@ -55,7 +65,3 @@
     }
   }
 </script>
-
-<style scoped>
-
-</style>
