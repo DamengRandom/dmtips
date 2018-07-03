@@ -2,8 +2,19 @@
 
 #contact {
   padding: $padding-xl;
+  .contact-map {
+    width: 100%;
+    height: 360px;
+    margin: $margin-sm 0;
+  }
   .fab {
     font-size: $font-h1;
-    padding: $padding-sm $padding-md;
+    padding: $padding-xl $padding-md;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #contact .fab {
+    font-size: $font-h4;
   }
 }
