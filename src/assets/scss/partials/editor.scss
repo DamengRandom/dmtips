@@ -2,6 +2,13 @@
 
 #editor {
   padding: $padding-xl;
+  button {
+    margin-right: $margin-xs; 
+  }
+  .editor-bar,
+  .title-box {
+    display: flex;
+  }
   .editorTitle {
     background: transparent;
     width: 100%;
@@ -10,8 +17,12 @@
     height: 48px;
     color: $theme-dark;
     display: block;
-    padding: 0 $padding-md;
-    height: 100%;
+    padding: 0 $padding-xs;
+    height: 100%; 
+  }
+  .editorTitle:focus {
+    border-bottom: 1px solid $theme-border;
+    outline: none;
   }
   .editorText {
     background: transparent;
@@ -22,7 +33,7 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    padding: 0 $padding-xl;
+    padding: 0 $padding-sm;
     height: 100%;
     p {
       width: 100%;
@@ -35,7 +46,19 @@
   #image figure {
     text-align: $align-center;
   }
+  figure {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
   .editorPreview {
     padding: 0 $padding-md;
+  }
+  i.fas {
+    font-size: $font-h3;
+    padding: $padding-md;
+    cursor: pointer;
+  }
+  .fas.fa-hand-point-right {
+    color: $theme-contrast;
   }
 }

@@ -1,10 +1,12 @@
 <template>
-  <div>
+  <div class="title-box">
+    <i class="fas fa-rocket"></i>
     <input type="text" 
       class="editorTitle"
       v-bind:value="theTitle"
       @input="titleTyping"
-      v-bind:placeholder="titlePlaceholder" />
+      v-bind:placeholder="titlePlaceholder"
+      autofocus />
   </div>
 </template>
 

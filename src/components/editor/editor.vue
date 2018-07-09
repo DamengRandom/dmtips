@@ -1,10 +1,23 @@
 <template>
   <div contenteditable="false" id="editor">
     <!-- functional buttons -->
-    <div v-if="articleTitle.length !== 0">
-      <md-button @click="addText" v-text="buttonTexts.text"></md-button>
-      <md-button @click="addImage" v-text="buttonTexts.image"></md-button>
-      <editor-decorators></editor-decorators>
+    <div v-if="articleTitle.length !== 0" class="editor-bar">
+      <button @click="addText">
+        <i class="fas fa-edit">
+          <md-tooltip md-direction="bottom" v-text="buttonTexts.text"></md-tooltip>
+        </i>
+      </button>
+      <button @click="addImage">
+        <i class="fas fa-image">
+          <md-tooltip md-direction="bottom" v-text="buttonTexts.image"></md-tooltip>
+        </i>
+      </button>
+      <button v-if="isTextable" @click="startEdit">
+        <i class="fas fa-hand-point-right">
+          <md-tooltip md-direction="bottom" v-text="buttonTexts.start"></md-tooltip>
+        </i>
+      </button>
+      <editor-decorators v-if="isStarted"></editor-decorators>
       <editor-preview v-show="previewable"></editor-preview>
     </div>
     <!-- article area -->
@@ -16,7 +29,8 @@
           class="editorText"
           :key="`text${index}`"
           :id="`text${index}`">
-          <p type="text" name="text" contenteditable="true" autofocus></p>
+          <!-- <i class="fas fa-comment-alt"></i> -->
+          <p :id="`text${index}p`" name="text" contenteditable="true"></p>
           <md-button @click="removeText(`text${index}`)" contenteditable="false">
             <md-icon>close</md-icon>
           </md-button>
@@ -59,22 +73,31 @@
         items: [],
         preview: false,
         buttonTexts: {
-          text: 'Text',
-          image: 'Image'
-        }
+          text: 'Add Text',
+          image: 'Add Image',
+          start: 'Start Edit'
+        },
+        isStarted: false,
+        isTextable: false
       }
     },
     methods: {
+      startEdit() {
+        document.getElementById('text0p').focus();
+        this.isStarted = true;
+      },
       addText() {
+        let firstNode = document.getElementById('text').firstChild;
         this.texts.push({
           word: ''
         });
-        let firstNode = document.getElementById('text').firstChild;
         if(firstNode === null){
+          this.isTextable = true;
           return true;
         }
         document.getElementById('content').appendChild(firstNode);
         this.preview = true;
+        this.isTextable = true;
       },
       removeText(textId) {
         document.getElementById(textId).remove();

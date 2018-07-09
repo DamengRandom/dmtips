@@ -1,7 +1,15 @@
 <template>
   <div class="editorPreview">
-    <md-button id="showPreview" @click="showPreview" v-text="previewText.preview"></md-button>
-    <md-button id="hidePreview" @click="hidePreview" v-text="previewText.hidePreview"></md-button>    
+    <button id="showPreview" @click="showPreview">
+      <i class="fas fa-eye">
+        <md-tooltip md-direction="bottom" v-text="previewText.preview"></md-tooltip>
+      </i>
+    </button>
+    <button id="hidePreview" @click="hidePreview">
+      <i class="fas fa-eye-slash">
+        <md-tooltip md-direction="bottom" v-text="previewText.hidePreview"></md-tooltip>
+      </i>
+    </button>  
   </div>
 </template>
 

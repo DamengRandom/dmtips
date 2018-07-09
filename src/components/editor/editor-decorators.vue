@@ -1,14 +1,50 @@
 <template>
   <div>
-    <md-button @click="addLink" v-text="decoratorsText.link"></md-button>
-    <md-button @click="setHeading" v-text="decoratorsText.heading"></md-button>
-    <md-button @click="bolderText" v-text="decoratorsText.bolder"></md-button>
-    <md-button @click="italicText" v-text="decoratorsText.italic"></md-button>
-    <md-button @click="strikeText" v-text="decoratorsText.strike"></md-button>
-    <md-button @click="textCenter" v-text="decoratorsText.centerText"></md-button>
-    <md-button @click="textRight" v-text="decoratorsText.rightText"></md-button>
-    <md-button @click="insertOrderedList" v-text="decoratorsText.orderedList"></md-button>
-    <md-button @click="insertUnorderedList" v-text="decoratorsText.unorderedList"></md-button>
+    <button @click="addLink">
+      <i class="fas fa-link">
+        <md-tooltip md-direction="bottom" v-text="decoratorsText.link"></md-tooltip>
+      </i>
+    </button>
+    <button @click="setHeading">
+      <i class="fas fa-heading">
+        <md-tooltip md-direction="bottom" v-text="decoratorsText.heading"></md-tooltip>
+      </i>
+    </button>
+    <button @click="bolderText">
+      <i class="fas fa-bold">
+        <md-tooltip md-direction="bottom" v-text="decoratorsText.bolder"></md-tooltip>
+      </i>
+    </button>
+    <button @click="italicText">
+      <i class="fas fa-italic">
+        <md-tooltip md-direction="bottom" v-text="decoratorsText.italic"></md-tooltip>
+      </i>
+    </button>
+    <button @click="strikeText">
+      <i class="fas fa-strikethrough">
+        <md-tooltip md-direction="bottom" v-text="decoratorsText.strike"></md-tooltip>
+      </i>
+    </button>
+    <button @click="textCenter">
+      <i class="fas fa-align-center">
+        <md-tooltip md-direction="bottom" v-text="decoratorsText.centerText"></md-tooltip>
+      </i>
+    </button>
+    <button @click="textRight">
+      <i class="fas fa-align-right">
+        <md-tooltip md-direction="bottom" v-text="decoratorsText.rightText"></md-tooltip>
+      </i>
+    </button>
+    <button @click="insertOrderedList">
+      <i class="fas fa-list-ol">
+        <md-tooltip md-direction="bottom" v-text="decoratorsText.orderedList"></md-tooltip>
+      </i>
+    </button>
+    <button @click="insertUnorderedList">
+      <i class="fas fa-list">
+        <md-tooltip md-direction="bottom" v-text="decoratorsText.unorderedList"></md-tooltip>
+      </i>
+    </button>
   </div>
 </template>
 
