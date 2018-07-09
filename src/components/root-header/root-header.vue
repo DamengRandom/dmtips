@@ -10,7 +10,7 @@
 
       <md-app-drawer :md-active.sync="menuVisible" md-persistent="full">
         <md-toolbar class="md-transparent" md-elevation="0">
-          <span>Menu List</span>
+          <span class="menu-title" v-text="menu"></span>
           <div class="md-toolbar-section-end">
             <md-button class="md-icon-button md-dense" @click="toggleMenu">
               <md-icon>keyboard_arrow_left</md-icon>
@@ -49,7 +49,8 @@
     name: 'Header',
     data: () => ({
       menuVisible: false,
-      title: 'DaMeng Tips'
+      title: 'DaMeng Tips',
+      menu: 'Menu List'
     }),
     components: {
       'app-dashboard': Dashboard,

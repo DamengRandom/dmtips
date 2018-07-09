@@ -1,3 +1,5 @@
+@import '../shared.scss';
+
 .md-app {
   height: 100%;
   border: 1px solid rgba(#000, .12);
@@ -10,6 +12,12 @@
   min-height: 480px;
   padding: 0px;
 }
+.menu-title {
+  font-size: $font-h2;
+}
 md-app-toolbar {
   height: 66px;
+}
+.md-list-item-text {
+  font-size: $font-h4;
 }
