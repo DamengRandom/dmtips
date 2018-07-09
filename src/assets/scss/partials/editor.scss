@@ -55,7 +55,7 @@
   }
   i.fas {
     font-size: $font-h3;
-    padding: $padding-md;
+    padding: $padding-md - 0.2em;
     cursor: pointer;
   }
   .fas.fa-hand-point-right {

@@ -25,17 +25,19 @@
       }
     },
     methods: {
-      preview(showHideParam) {
+      preview(showHideParam, buttonShowHide) {
         for(let i = 0; i < document.querySelector("#content").childNodes.length; i++){
           document.querySelector("#content").childNodes[i].childNodes[0].contentEditable = showHideParam;
+          document.querySelector("#content").childNodes[i].lastChild.style.display = buttonShowHide;
         }
       },
       showPreview() {
-        this.preview("false");
+        this.preview("false", "none");
         document.getElementById('content').style.border = "1px solid";
+        console.log();
       },
       hidePreview() {
-        this.preview("true");
+        this.preview("true", "block");
         document.getElementById('content').style.border = "none";
       }
     }

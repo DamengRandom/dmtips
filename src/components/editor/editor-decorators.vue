@@ -25,6 +25,11 @@
         <md-tooltip md-direction="bottom" v-text="decoratorsText.strike"></md-tooltip>
       </i>
     </button>
+    <button @click="textLeft">
+      <i class="fas fa-align-left">
+        <md-tooltip md-direction="bottom" v-text="decoratorsText.leftText"></md-tooltip>
+      </i>
+    </button>
     <button @click="textCenter">
       <i class="fas fa-align-center">
         <md-tooltip md-direction="bottom" v-text="decoratorsText.centerText"></md-tooltip>
@@ -59,6 +64,7 @@
           bolder: 'Bolder',
           italic: 'Italic',
           strike: 'Strike',
+          leftText: 'Text Left',
           centerText: 'Text Center',
           rightText: 'Text RIght',
           orderedList: 'Ordered List',
@@ -75,6 +81,9 @@
       },
       strikeText() {
         document.execCommand('strikeThrough');
+      },
+      textLeft() {
+        document.execCommand('JustifyLeft');
       },
       textCenter(){
         document.execCommand('JustifyCenter');

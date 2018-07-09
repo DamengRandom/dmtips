@@ -31,7 +31,7 @@
           :id="`text${index}`">
           <!-- <i class="fas fa-comment-alt"></i> -->
           <p :id="`text${index}p`" name="text" contenteditable="true"></p>
-          <md-button @click="removeText(`text${index}`)" contenteditable="false">
+          <md-button @click="removeText(`text${index}`)" contenteditable="false" class="close">
             <md-icon>close</md-icon>
           </md-button>
         </div>
@@ -42,7 +42,7 @@
           :id="`item${index}`">
           <input v-if="!item.image" type="file" @change="onFileChange(item, $event)">
           <div v-else>
-            <md-button @click="removeImage(item)">
+            <md-button @click="removeImage(item)" class="close">
               <md-icon>close</md-icon>
             </md-button>
             <img :src="item.image" />
